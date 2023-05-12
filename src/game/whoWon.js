@@ -36,5 +36,10 @@ export default function whoWon(cellValues) {
     return 'X'
   else if (diagCounts[0] === -3 || diagCounts[1] === -3)
     return 'O'
+
+  let isEmptySpace = false
+  cellValues.forEach(value => { if (value === ' ') isEmptySpace = true })
+  if (!isEmptySpace)
+    return 'Draw'
   return 'None'
 }
