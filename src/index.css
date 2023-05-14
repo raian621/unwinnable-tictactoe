@@ -23,4 +23,112 @@ code {
   width: 100px;
   height: 100px;
   font-size: 50px;
+  border: none;
+  background-color: #00000000;
+  text-justify: center;
+  padding: 0px;
+}
+
+.game-cell.x {
+  color: blue
+}
+
+.game-cell.o {
+  color: red
+}
+
+.hover-x {
+  color: transparent;
+  transition: color 300ms ease;
+}
+
+.hover-x:hover {
+  color: blue;
+  filter: opacity(0.5);
+  cursor: pointer;
+}
+
+.hover-o {
+  color: transparent;
+  transition: color 300ms ease;
+}
+
+.hover-o:hover {
+  color: red;
+  filter: opacity(0.5);
+  cursor: pointer;
+}
+
+.grid {
+  position: fixed;
+  /* background-color: aqua; */
+  pointer-events: none;
+  width: 320px;
+  height: 320px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.v1-bar {
+  position: fixed;
+  background-color: black;
+  transform: translateX(100px);
+  width: 10px;
+  height: 320px;
+  border-radius: 5px;
+}
+
+.v2-bar {
+  position: fixed;
+  background-color: black;
+  transform: translateX(210px);
+  width: 10px;
+  height: 320px;
+  border-radius: 5px;
+}
+
+.h1-bar {
+  position: fixed;
+  background-color: black;
+  transform: translateY(100px);
+  width: 320px;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.h2-bar {
+  position: fixed;
+  background-color: black;
+  transform: translateY(210px);
+  width: 320px;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.game-board-wrapper {
+  width: 340px;
+  height: 340px;
+  margin: auto;
+  padding: 10px;
+}
+
+.game-controls {
+  margin: auto;
+  width: fit-content;
+  gap: 5px;
+  display: flex;
+}
+
+.game-control-button {
+  padding: 10px;
+  background-color: #2e3cff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+}
+
+.game-control-button:hover {
+  background-color: #1f29ad;
+  cursor: pointer;
 }
